@@ -7,11 +7,11 @@
 #include <iostream>
 #include <vector>
 
-typedef struct {
+struct ExtendAlignParams {
   int xDrop = 32;
-  int gapOpenScore   = -20;
+  int gapOpenScore = -20;
   int gapExtendScore = -2;
-} ExtendAlignParams;
+};
 
 typedef struct {
   int   bestA, bestB;

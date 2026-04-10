@@ -4,6 +4,7 @@
 #include <cassert>
 #include <ctype.h>
 #include <numeric>
+#include <sstream>
 
 static void UpcaseString( std::string& str ) {
   for( auto& ch : str )
