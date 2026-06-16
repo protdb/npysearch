@@ -1,6 +1,11 @@
 """
-Please refer to the documentation provided in the README.md,
-which can be found at npysearch's PyPI URL: https://pypi.org/project/npysearch/
+npysearch-win: Windows-compatible fork of npysearch.
+
+Please refer to the documentation provided in the README.md.
+
+Original project:
+  GitHub: https://github.com/tamminenlab/npysearch
+  PyPI:   https://test.pypi.org/project/npysearch/
 """
 
 __all__ = ["blast", "read_fasta", "write_fasta", "cigar_string"]
@@ -141,7 +146,7 @@ def blast(
                    stored in the working directory
     """
 
-    startTime = strftime("%Y-%m-%d-%H:%M:%S", localtime())
+    startTime = strftime("%Y%m%d_%H%M%S", localtime())
 
     # Checking what form the query was input in
     # str for path to fasta file and dict for sequences

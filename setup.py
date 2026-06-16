@@ -6,7 +6,7 @@ from pybind11 import get_cmake_dir
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 from setuptools import setup, find_packages
 
-__version__ = "1.3.2"
+__version__ = "1.3.1"
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -48,12 +48,17 @@ classifiers=[
 ]
 
 setup(
-    name             = "npysearch",
+    name             = "npysearch-win",
     version          = __version__,
-    author           = "Aditya Jeevannavar",
+    author           = "Aditya Jeevannavar, Kirill Nikolsky",
     author_email     = "adjeev@utu.fi",
-    url              = "https://github.com/jeevannavar/npysearch",
-    description      = "Python bindings for nsearch, an efficient BLAST-like sequence comparison algorithm written in C++",
+    url              = "https://github.com/tamminenlab/npysearch",
+    project_urls     = {
+        "Original project (GitHub)": "https://github.com/tamminenlab/npysearch",
+        "Original project (PyPI)":   "https://test.pypi.org/project/npysearch/",
+        "Fork source":               "https://github.com/tamminenlab/npysearch",
+    },
+    description      = "Windows-compatible fork of npysearch: Python bindings for nsearch, an efficient BLAST-like sequence comparison algorithm written in C++",
     long_description = long_description,
     long_description_content_type="text/markdown",
     packages         = ["npysearch"],
@@ -61,7 +66,7 @@ setup(
     extras_require   = {"test": "pytest"},
     cmdclass         = {"build_ext": build_ext},
     zip_safe         = False,
-    python_requires  = ">=3.6",
+    python_requires  = ">=3.10",
     classifiers      = classifiers,
-    keywords         = "BLAST nsearch bioinformatics"
+    keywords         = "BLAST nsearch bioinformatics windows"
 )
